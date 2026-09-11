@@ -1,0 +1,272 @@
+.project-wide {
+  grid-column: 1 / -1;
+  min-height: 360px;
+}
+
+.project-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.project-top .project-number {
+  margin-bottom: 0;
+}
+
+.project-brand {
+  width: 145px;
+  height: 50px;
+  object-fit: contain;
+  object-position: right top;
+  filter: grayscale(1) brightness(.42);
+  opacity: .76;
+}
+
+.project-wide .project-type {
+  margin-top: 70px;
+}
+
+.project-featured .project-type {
+  color: var(--ink);
+  opacity: .72;
+}
+
+.project-wide > p:not(.project-type) {
+  max-width: 690px;
+}
+
+@media (max-width: 800px) {
+  .project-wide {
+    grid-column: auto;
+  }
+
+  .project-brand {
+    width: 110px;
+  }
+
+  .project-wide .project-type {
+    margin-top: 50px;
+  }
+}
+
+.live-chat-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  padding: 14px 18px;
+  border: 1px solid rgba(215, 243, 106, .55);
+  border-radius: 999px;
+  background: var(--lime);
+  color: var(--ink);
+  font: 700 .82rem var(--sans);
+  cursor: pointer;
+}
+
+.live-chat-trigger b {
+  margin-left: 8px;
+}
+
+.live-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #25d366;
+  box-shadow: 0 0 0 4px rgba(37, 211, 102, .15);
+}
+
+.chat-hint {
+  max-width: 235px;
+  color: #97b8c4;
+  font-size: .75rem;
+  line-height: 1.5;
+}
+
+.gio-chat {
+  width: min(440px, calc(100vw - 28px));
+  max-height: min(720px, calc(100vh - 28px));
+  margin: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 22px;
+  background: #f8faf7;
+  color: var(--ink);
+  box-shadow: 0 28px 90px rgba(3, 19, 42, .36);
+  overflow: hidden;
+}
+
+.gio-chat::backdrop {
+  background: rgba(3, 18, 39, .7);
+  backdrop-filter: blur(7px);
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  background: var(--ink);
+  color: white;
+}
+
+.chat-header > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.assistant-mark {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--lime);
+  color: var(--ink);
+  font: 800 .76rem var(--sans);
+}
+
+.chat-header strong,
+.chat-header small {
+  display: block;
+}
+
+.chat-header strong {
+  font-size: .94rem;
+}
+
+.chat-header small {
+  margin-top: 2px;
+  color: #aac0cf;
+  font-size: .75rem;
+}
+
+.chat-header small .live-dot {
+  width: 6px;
+  height: 6px;
+  margin-right: 6px;
+}
+
+.chat-close {
+  border: 0;
+  background: transparent;
+  color: #dce8ef;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.chat-body {
+  min-height: 190px;
+  max-height: 310px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.chat-message {
+  max-width: 84%;
+  margin-bottom: 12px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  font-size: .86rem;
+  line-height: 1.55;
+}
+
+.chat-message p {
+  margin: 0;
+}
+
+.assistant-message {
+  border-bottom-left-radius: 4px;
+  background: white;
+  box-shadow: 0 4px 14px rgba(12, 35, 67, .08);
+}
+
+.visitor-message {
+  margin-left: auto;
+  border-bottom-right-radius: 4px;
+  background: var(--green);
+  color: var(--ink);
+}
+
+.chat-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 20px 18px;
+}
+
+.chat-options button,
+.chat-fallback a {
+  padding: 9px 11px;
+  border: 1px solid #ced9d5;
+  border-radius: 999px;
+  background: white;
+  color: var(--ink);
+  font: 700 .72rem var(--sans);
+  cursor: pointer;
+}
+
+.chat-options .live-option,
+.chat-fallback .whatsapp-link {
+  border-color: #25d366;
+  background: #eafff1;
+}
+
+.chat-form {
+  display: grid;
+  grid-template-columns: 1fr 42px;
+  gap: 9px;
+  padding: 14px 20px 20px;
+  border-top: 1px solid #e1e7e4;
+}
+
+.chat-form input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid #ced9d5;
+  border-radius: 999px;
+  background: white;
+  color: var(--ink);
+  font: 400 .82rem var(--sans);
+  outline: none;
+}
+
+.chat-form input:focus {
+  border-color: var(--green);
+}
+
+.chat-form button {
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--lime);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.chat-countdown {
+  margin-top: 10px !important;
+  color: var(--green);
+  font: 700 .72rem var(--mono);
+}
+
+.chat-fallback {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+@media (max-width: 520px) {
+  .gio-chat {
+    max-height: calc(100vh - 14px);
+  }
+
+  .chat-body {
+    max-height: 280px;
+  }
+}
